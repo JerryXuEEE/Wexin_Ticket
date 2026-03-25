@@ -1,0 +1,490 @@
+GET https://www.zwcdata.com/ly2/api/venue/index/list?pageNum=1&pageSize=100&type=&addressIp=&isPredetemine=1 HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:12 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+1002
+{"total":1,"rows":[{"createBy":"1","createTime":"2025-03-14 11:40:38","updateBy":"16","updateTime":"2025-05-06 10:13:03","remark":null,"id":3,"img":"/profile/upload/2025/04/03/99c2b9168ebee9106b25d40940e582a_20250403100947A006.png","name":"跃动乒羽馆","type":"3","payType":"1","businessTime":"09:30-21:30","startPrice":0.00,"isPredetemine":"1","predetemineLeastHour":1.00,"predetemineDay":3,"predetemineEndHour":null,"predetemineNum":null,"maxHour":null,"isBalance":"0","predetemineAsk":null,"addressCounty":"成都市","addressDetail":"成都市武侯区石羊街道天府四街成都高新区工青妇活动中心六楼","addressIp":"104.049897,30.542768","tel":null,"facilityServices":"","remarks":"<p class=\"ql-align-center\">跃动乒羽馆入场须知</p><p class=\"ql-align-center\">Entrance Notice for Yuedong Table Tennis and Badminton Hall </p><p class=\"ql-align-center\"><br></p><p>1、入场时须出示预约凭证，由工作人员检验确认后到指定场地内运动。</p><p>1.&nbsp;The reservation voucher must be presented when entering. After the reservation voucher is validated by staff, you can enter the designated venue to exercise</p><p><br></p><p>2、运动时间截止时需及时离场，以便后续场次顾客入场。</p><p>2.For the convenience of other customers, please leave the venue immediately when reservation times up.</p><p><br></p><p>3、儿童入场须有成人看护，避免发生意外。</p><p>3.Children must have an adult supervisor when entering.</p><p><br></p><p>4、凡患有高血压、心脏病、精神病等不适宜剧烈运动患者及酗酒者禁止进入馆内。</p><p>4.Patients with high blood pressure, heart disease, mental illness,etc., who are not suitable for vigorous exercise and alcoholics are prohibited from entering the venue.</p><p><br></p><p>5、场地内活动请穿浅色软底运动鞋，严禁穿硬底鞋、钉鞋、皮鞋或黑色软底鞋进入馆内。</p><p>5. Please wear light-colored soft-soled sneakers for indoor activities. Do not wear hard-soled shoes, spiked shoes, leather shoes, or black soft-soled shoes.</p><p><br></p><p>6、馆内严禁吸烟，禁止异味食物、随地吐痰、乱扔垃圾、大声喧哗、赤膊等不文明举止。</p><p>6. Smoking, having&nbsp;smelly food, spitting, littering, loud talking, shirtless, and other uncivilized behaviors are prohibited in the venue.</p><p><br></p><p>7、请勿拉拽、倚靠、移动球网、球架及球桌，入场须爱护馆内设施和物品，如有损坏，需根据设备、器材损坏程度，照价赔偿。</p><p>7.Do not pull, lean, or move the net, ball&nbsp;rack&nbsp;or table.Please take care of the facilities and equipment&nbsp;in&nbsp;the venue. Compensation will be charged by the degrees of damage to the facilities and equipment.</p><p><br></p><p>8、请自备羽毛球拍、乒乓球拍及球等相关训练装备。</p><p>8.Please bring your own badminton rackets, table tennis bats, balls and other relevant training equipment.</p><p><br></p><p>9、任何个人及单位不得擅自利用馆内设施开展培训、赛事活动及任何商业活动，在未经场馆方许可情况下，严禁悬挂横幅、标语等物品。</p><p>9.Individuals or companies are not allowed to use the facilities in the venue to carry out training, competition events, or any commercial activities without authorization. Hanging banners, slogans, and other items are prohibited without authorization.</p><p><br></p><p>10、请仔细阅读以上提示，本馆已履行其告知义务，如因自身原因对本人或他人造成人身伤害、财产损失等情况，本馆不承担任何责任。</p><p>10.&nbsp;Please read the tips above carefully. The venue has fulfilled its obligation&nbsp;to inform. If&nbsp;any personal injury or property damage caused to itself or others due to its own reasons, the venue does not assume any responsibility.</p>","status":"0","delFlag":"0","predetemineTime":"09:30","showDay":null,"mobile":"18008068607","distance":null,"isCollect":null}],"code":200,"msg":"查询成功","size":1}
+0
+
+
+
+------------------------------------------------------------------
+
+GET https://www.zwcdata.com/ly2/api/dict/type/venueType HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:12 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+2b
+{"code":200,"msg":"操作成功","data":[]}
+0
+
+
+
+------------------------------------------------------------------
+
+GET https://www.zwcdata.com/ly2/api/venue/index/list?pageNum=1&pageSize=10&type=&addressIp=&isPredetemine=1 HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:12 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+1002
+{"total":1,"rows":[{"createBy":"1","createTime":"2025-03-14 11:40:38","updateBy":"16","updateTime":"2025-05-06 10:13:03","remark":null,"id":3,"img":"/profile/upload/2025/04/03/99c2b9168ebee9106b25d40940e582a_20250403100947A006.png","name":"跃动乒羽馆","type":"3","payType":"1","businessTime":"09:30-21:30","startPrice":0.00,"isPredetemine":"1","predetemineLeastHour":1.00,"predetemineDay":3,"predetemineEndHour":null,"predetemineNum":null,"maxHour":null,"isBalance":"0","predetemineAsk":null,"addressCounty":"成都市","addressDetail":"成都市武侯区石羊街道天府四街成都高新区工青妇活动中心六楼","addressIp":"104.049897,30.542768","tel":null,"facilityServices":"","remarks":"<p class=\"ql-align-center\">跃动乒羽馆入场须知</p><p class=\"ql-align-center\">Entrance Notice for Yuedong Table Tennis and Badminton Hall </p><p class=\"ql-align-center\"><br></p><p>1、入场时须出示预约凭证，由工作人员检验确认后到指定场地内运动。</p><p>1.&nbsp;The reservation voucher must be presented when entering. After the reservation voucher is validated by staff, you can enter the designated venue to exercise</p><p><br></p><p>2、运动时间截止时需及时离场，以便后续场次顾客入场。</p><p>2.For the convenience of other customers, please leave the venue immediately when reservation times up.</p><p><br></p><p>3、儿童入场须有成人看护，避免发生意外。</p><p>3.Children must have an adult supervisor when entering.</p><p><br></p><p>4、凡患有高血压、心脏病、精神病等不适宜剧烈运动患者及酗酒者禁止进入馆内。</p><p>4.Patients with high blood pressure, heart disease, mental illness,etc., who are not suitable for vigorous exercise and alcoholics are prohibited from entering the venue.</p><p><br></p><p>5、场地内活动请穿浅色软底运动鞋，严禁穿硬底鞋、钉鞋、皮鞋或黑色软底鞋进入馆内。</p><p>5. Please wear light-colored soft-soled sneakers for indoor activities. Do not wear hard-soled shoes, spiked shoes, leather shoes, or black soft-soled shoes.</p><p><br></p><p>6、馆内严禁吸烟，禁止异味食物、随地吐痰、乱扔垃圾、大声喧哗、赤膊等不文明举止。</p><p>6. Smoking, having&nbsp;smelly food, spitting, littering, loud talking, shirtless, and other uncivilized behaviors are prohibited in the venue.</p><p><br></p><p>7、请勿拉拽、倚靠、移动球网、球架及球桌，入场须爱护馆内设施和物品，如有损坏，需根据设备、器材损坏程度，照价赔偿。</p><p>7.Do not pull, lean, or move the net, ball&nbsp;rack&nbsp;or table.Please take care of the facilities and equipment&nbsp;in&nbsp;the venue. Compensation will be charged by the degrees of damage to the facilities and equipment.</p><p><br></p><p>8、请自备羽毛球拍、乒乓球拍及球等相关训练装备。</p><p>8.Please bring your own badminton rackets, table tennis bats, balls and other relevant training equipment.</p><p><br></p><p>9、任何个人及单位不得擅自利用馆内设施开展培训、赛事活动及任何商业活动，在未经场馆方许可情况下，严禁悬挂横幅、标语等物品。</p><p>9.Individuals or companies are not allowed to use the facilities in the venue to carry out training, competition events, or any commercial activities without authorization. Hanging banners, slogans, and other items are prohibited without authorization.</p><p><br></p><p>10、请仔细阅读以上提示，本馆已履行其告知义务，如因自身原因对本人或他人造成人身伤害、财产损失等情况，本馆不承担任何责任。</p><p>10.&nbsp;Please read the tips above carefully. The venue has fulfilled its obligation&nbsp;to inform. If&nbsp;any personal injury or property damage caused to itself or others due to its own reasons, the venue does not assume any responsibility.</p>","status":"0","delFlag":"0","predetemineTime":"09:30","showDay":null,"mobile":"18008068607","distance":null,"isCollect":null}],"code":200,"msg":"查询成功","size":1}
+0
+
+
+
+------------------------------------------------------------------
+
+POST https://www.zwcdata.com/ly2/api/base/day HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Content-Length: 2
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+{}
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:16 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+3e
+{"code":200,"msg":"操作成功","data":"2026-03-23 21:19:16"}
+0
+
+
+
+------------------------------------------------------------------
+
+POST https://www.zwcdata.com/ly2/api/base/day HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Content-Length: 2
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+{}
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:17 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+3e
+{"code":200,"msg":"操作成功","data":"2026-03-23 21:19:17"}
+0
+
+
+
+------------------------------------------------------------------
+
+CONNECT cdn.uviewui.com:443 HTTP/1.1
+Host: cdn.uviewui.com:443
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+
+
+HTTP/1.1 200 Connection established
+
+
+
+------------------------------------------------------------------
+
+GET https://www.zwcdata.com/ly2/api/venue/index/rule?venueId=3 HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:17 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+44a
+{"code":200,"msg":"操作成功","data":[{"createBy":"1","createTime":"2025-03-14 11:40:38","updateBy":null,"updateTime":null,"remark":null,"id":392,"venueId":3,"type":"0","startTime":0.00,"endTime":2.00,"proportion":0.00,"status":"0","delFlag":"0"},{"createBy":"1","createTime":"2025-03-14 11:40:38","updateBy":null,"updateTime":null,"remark":null,"id":393,"venueId":3,"type":"0","startTime":2.00,"endTime":5.00,"proportion":40.00,"status":"0","delFlag":"0"},{"createBy":"1","createTime":"2025-03-14 11:40:38","updateBy":null,"updateTime":null,"remark":null,"id":394,"venueId":3,"type":"0","startTime":5.00,"endTime":12.00,"proportion":50.00,"status":"0","delFlag":"0"},{"createBy":"1","createTime":"2025-03-14 11:40:38","updateBy":null,"updateTime":null,"remark":null,"id":395,"venueId":3,"type":"0","startTime":12.00,"endTime":24.00,"proportion":80.00,"status":"0","delFlag":"0"},{"createBy":"1","createTime":"2025-03-14 11:40:38","updateBy":null,"updateTime":null,"remark":null,"id":396,"venueId":3,"type":"0","startTime":24.00,"endTime":999.00,"proportion":100.00,"status":"0","delFlag":"0"}]}
+0
+
+
+
+------------------------------------------------------------------
+
+GET https://www.zwcdata.com/ly2/api/venue/index/getVenueTypes?venueId=3&type=0 HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:17 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+1f4
+{"code":200,"msg":"操作成功","data":[{"createBy":null,"createTime":"2025-03-14 14:45:24","updateBy":null,"updateTime":"2025-04-04 10:09:40","remark":null,"id":29,"venueId":3,"type":"0","fatherId":null,"fatherName":null,"name":"羽毛球","status":"0","delFlag":"0"},{"createBy":null,"createTime":"2025-03-14 14:45:32","updateBy":null,"updateTime":"2025-04-04 10:09:44","remark":null,"id":30,"venueId":3,"type":"0","fatherId":null,"fatherName":null,"name":"乒乓球","status":"0","delFlag":"0"}]}
+0
+
+
+
+------------------------------------------------------------------
+
+GET https://www.zwcdata.com/ly2/api/venue/index/getVenueStatus?venueId=3&venuetypeId=29&date=2026-03-23 HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:18 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+3175
+{"code":200,"msg":"操作成功","data":{"date":["09:30","10:30","11:30","12:30","13:30","14:30","15:30","16:30","17:30","18:30","19:30","20:30"],"sites":[{"id":31,"siteName":"1号场","siteStatus":[{"id":58321,"setDate":"2026-03-23","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":58322,"setDate":"2026-03-23","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":58323,"setDate":"2026-03-23","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":58324,"setDate":"2026-03-23","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":58325,"setDate":"2026-03-23","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":58326,"setDate":"2026-03-23","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":58327,"setDate":"2026-03-23","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":58328,"setDate":"2026-03-23","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":58329,"setDate":"2026-03-23","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":58330,"setDate":"2026-03-23","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":58331,"setDate":"2026-03-23","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":58332,"setDate":"2026-03-23","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":32,"siteName":"2号场","siteStatus":[{"id":58693,"setDate":"2026-03-23","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":58694,"setDate":"2026-03-23","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":58695,"setDate":"2026-03-23","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":58696,"setDate":"2026-03-23","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":58697,"setDate":"2026-03-23","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":58698,"setDate":"2026-03-23","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":58699,"setDate":"2026-03-23","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":58700,"setDate":"2026-03-23","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":58701,"setDate":"2026-03-23","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":58702,"setDate":"2026-03-23","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":58703,"setDate":"2026-03-23","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":58704,"setDate":"2026-03-23","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":33,"siteName":"3号场","siteStatus":[{"id":59065,"setDate":"2026-03-23","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":59066,"setDate":"2026-03-23","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":59067,"setDate":"2026-03-23","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":59068,"setDate":"2026-03-23","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":59069,"setDate":"2026-03-23","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":59070,"setDate":"2026-03-23","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":59071,"setDate":"2026-03-23","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":59072,"setDate":"2026-03-23","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":59073,"setDate":"2026-03-23","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":59074,"setDate":"2026-03-23","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":59075,"setDate":"2026-03-23","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":59076,"setDate":"2026-03-23","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":34,"siteName":"4号场","siteStatus":[{"id":59437,"setDate":"2026-03-23","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":59438,"setDate":"2026-03-23","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":59439,"setDate":"2026-03-23","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":59440,"setDate":"2026-03-23","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":59441,"setDate":"2026-03-23","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":59442,"setDate":"2026-03-23","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":59443,"setDate":"2026-03-23","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":59444,"setDate":"2026-03-23","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":59445,"setDate":"2026-03-23","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":59446,"setDate":"2026-03-23","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":59447,"setDate":"2026-03-23","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":59448,"setDate":"2026-03-23","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"0","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":35,"siteName":"5号场","siteStatus":[{"id":59809,"setDate":"2026-03-23","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":59810,"setDate":"2026-03-23","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":59811,"setDate":"2026-03-23","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":59812,"setDate":"2026-03-23","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":59813,"setDate":"2026-03-23","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":59814,"setDate":"2026-03-23","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":59815,"setDate":"2026-03-23","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":59816,"setDate":"2026-03-23","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":59817,"setDate":"2026-03-23","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":59818,"setDate":"2026-03-23","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":59819,"setDate":"2026-03-23","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":59820,"setDate":"2026-03-23","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"0","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":36,"siteName":"6号场","siteStatus":[{"id":60181,"setDate":"2026-03-23","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":60182,"setDate":"2026-03-23","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"4","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":60183,"setDate":"2026-03-23","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":60184,"setDate":"2026-03-23","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":60185,"setDate":"2026-03-23","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":60186,"setDate":"2026-03-23","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":60187,"setDate":"2026-03-23","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":60188,"setDate":"2026-03-23","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"0","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":60189,"setDate":"2026-03-23","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":60190,"setDate":"2026-03-23","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":60191,"setDate":"2026-03-23","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":60192,"setDate":"2026-03-23","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]}]}}
+0
+
+
+
+------------------------------------------------------------------
+
+GET https://www.zwcdata.com/ly2/api/venue/index/getVenueStatus?venueId=3&venuetypeId=29&date=2026-03-25 HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:20 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+1eee
+{"code":200,"msg":"操作成功","data":{"date":["09:30","10:30","11:30","12:30","13:30","14:30","15:30","16:30","17:30","18:30","19:30","20:30"],"sites":[{"id":31,"siteName":"1号场","siteStatus":[{"id":58345,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":58346,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":58347,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":58348,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":58349,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":58350,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":58351,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":58352,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":58353,"setDate":"2026-03-25","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":58354,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":58355,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":58356,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":32,"siteName":"2号场","siteStatus":[{"id":58717,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":58718,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":58719,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":58720,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":58721,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":58722,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":58723,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":58724,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":58725,"setDate":"2026-03-25","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":58726,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":58727,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":58728,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":33,"siteName":"3号场","siteStatus":[{"id":59089,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":59090,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":59091,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":59092,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":59093,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":59094,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":59095,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":59096,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":59097,"setDate":"2026-03-25","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":59098,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":59099,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":59100,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":34,"siteName":"4号场","siteStatus":[{"id":59461,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":59462,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":59463,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":59464,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":59465,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":59466,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":59467,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":59468,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":59469,"setDate":"2026-03-25","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":
+1000
+"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":59470,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":59471,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":59472,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":35,"siteName":"5号场","siteStatus":[{"id":59833,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":59834,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":59835,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":59836,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":59837,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":59838,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":59839,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":59840,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":59841,"setDate":"2026-03-25","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":59842,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":59843,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":59844,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":36,"siteName":"6号场","siteStatus":[{"id":60205,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":60206,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":60207,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":60208,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":60209,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":60210,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":60211,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":60212,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"4","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":60213,"setDate":"2026-03-25","s
+287
+etTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":60214,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":60215,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":60216,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]}]}}
+0
+
+
+
+------------------------------------------------------------------
+
+POST https://www.zwcdata.com/ly2/api/venueOrder HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Content-Length: 227
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+{"isCoach":"0","type":0,"venueName":"跃动乒羽馆","startTime":"2026-03-25","times":["11:30-12:30"],"venueId":"3","venuetypeId1":29,"venuetypeId2":31,"venueMoney":3600,"venuetypeName1":"羽毛球","venuetypeName2":"1号场"}
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:27 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+30
+{"code":200,"msg":"操作成功","data":[25646]}
+0
+
+
+
+------------------------------------------------------------------
+
+GET https://www.zwcdata.com/ly2/api/venueOrder/25646 HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:28 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+14ba
+{"code":200,"msg":"操作成功","data":{"createBy":"15143","createTime":"2026-03-23 21:19:27","updateBy":null,"updateTime":null,"remark":null,"id":25646,"orderNo":"***MASKED_ORDER_NO***","userId":"***MASKED_USER_ID***","userName":"昵称1774168457506","userTel":"13709099819","type":"0","venueId":3,"venueName":"跃动乒羽馆","venuetypeId1":29,"venuetypeName1":"羽毛球","venuetypeId2":31,"venuetypeName2":"1号场","img":"/profile/upload/2025/04/03/99c2b9168ebee9106b25d40940e582a_20250403100947A006.png","payType":"0","venueMoney":36.00,"orderNumber":0,"startTime":"2026-03-25 11:30:00","endTime":"2026-03-25 12:30:00","isCoach":"0","coachId":null,"coachName":null,"coachMoney":null,"payCoachMoney":null,"payCahchType":null,"coachStartTime":null,"coachEndTime":null,"payTotalMoney":36.00,"discountMoney":0.00,"payableMoney":36.00,"payMoney":0.00,"otherMoney":0.00,"payNo":null,"transactionId":null,"payTime":null,"remarks":null,"isUserDel":"0","status":"0","status2":null,"delFlag":"0","isApprove":"0","isRefund":"0","refundType":null,"refundNo":null,"refundMoney":null,"refundRemarks":null,"refundDatetime":null,"refundFlowStatus":null,"refundFlowTime":null,"refundFlowRemarks":null,"refundFlowUserId":null,"refundStatus":null,"refundFailDesc":null,"isInvoice":"0","isStopPc":null,"isRate":"0","venue":{"createBy":"1","createTime":"2025-03-14 11:40:38","updateBy":"16","updateTime":"2025-05-06 10:13:03","remark":null,"id":3,"img":"/profile/upload/2025/04/03/99c2b9168ebee9106b25d40940e582a_20250403100947A006.png","name":"跃动乒羽馆","type":"3","payType":"1","businessTime":"09:30-21:30","startPrice":0.00,"isPredetemine":"1","predetemineLeastHour":1.00,"predetemineDay":3,"predetemineEndHour":null,"predetemineNum":2,"maxHour":6,"isBalance":"0","predetemineAsk":null,"addressCounty":"成都市","addressDetail":"成都市武侯区石羊街道天府四街成都高新区工青妇活动中心六楼","addressIp":"104.049897,30.542768","tel":null,"facilityServices":"","remarks":"<p class=\"ql-align-center\">跃动乒羽馆入场须知</p><p class=\"ql-align-center\">Entrance Notice for Yuedong Table Tennis and Badminton Hall </p><p class=\"ql-align-center\"><br></p><p>1、入场时须出示预约凭证，由工作人员检验确认后到指定场地内运动。</p><p>1.&nbsp;The reservation voucher must be presented when entering. After the reservation voucher is validated by staff, you can enter the designated venue to exercise</p><p><br></p><p>2、运动时间截止时需及时离场，以便后续场次顾客入场。</p><p>2.For the convenience of other customers, please leave the venue immediately when reservation times up.</p><p><br></p><p>3、儿童入场须有成人看护，避免发生意外。</p><p>3.Children must have an adult supervisor when entering.</p><p><br></p><p>4、凡患有高血压、心脏病、精神病等不适宜剧烈运动患者及酗酒者禁止进入馆内。</p><p>4.Patients with high blood pressure, heart disease, mental illness,etc., who are not suitable for vigorous exercise and alcoholics are prohibited from entering the venue.</p><p><br></p><p>5、场地内活动请穿浅色软底运动鞋，严禁穿硬底鞋、钉鞋、皮鞋或黑色软底鞋进入馆内。</p><p>5. Please wear light-colored soft-soled sneakers for indoor activities. Do not wear hard-soled shoes, spiked shoes, leather shoes, or black soft-soled shoes.</p><p><br></p><p>6、馆内严禁吸烟，禁止异味食物、随地吐痰、乱扔垃圾、大声喧哗、赤膊等不文明举止。</p><p>6. Smoking, having&nbsp;smelly food, spitting, littering, loud talking, shirtless, and other uncivilized behaviors are prohibited in the venue.</p><p><br></p><p>7、请勿拉拽、倚靠、移动球网、球架及球桌，入场须爱护馆内设施和物品，如有损坏，需根据设备、器材损坏程度，照价赔偿。</p><p>7.Do not pull, lean, or move the net, ball&nbsp;rack&nbsp;or table.Please take care of the facilities and equipment&nbsp;in&nbsp;the venue. Compensation will be charged by the degrees of damage to the facilities and equipment.</p><p><br></p><p>8、请自备羽毛球拍、乒乓球拍及球等相关训练装备。</p><p>8.Please bring your own badminton rackets, table tennis bats, balls and other relevant training equipment.</p><p><br></p><p>9、任何个人及单位不得擅自利用馆内设施开展培训、赛事活动及任何商业活动，在未经场馆方许可情况下，严禁悬挂横幅、标语等物品。</p><p>9.Individuals or companies are not allowed to use the facilities in the venue to carry out training, competition events, or any commercial activities without authorization. Hanging banners, slogans, and other items are prohibited without authorization.</p><p><br></p><p>10、请仔细阅读以上提示，本馆已履行其告知义务，如因自身原因对本人或他人造成人身伤害、财产损失等情况，本馆不承担任何责任。</p><p>10.&nbsp;Please read the tips above carefully. The venue has fulfilled its obligation&nbsp;to inform. If&nbsp;any personal injury or property damage caused to itself or others due to its own reasons, the venue does not assume any responsibility.</p>","status":"0","delFlag":"0","predetemineTime":"09:30","showDay":null,"mobile":"18008068607"},"coach":null}}
+0
+
+
+
+------------------------------------------------------------------
+
+GET https://www.zwcdata.com/ly2/api/venueOrder/payable/25646 HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:28 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+2e
+{"code":200,"msg":"操作成功","data":36.00}
+0
+
+
+
+------------------------------------------------------------------
+
+GET https://www.zwcdata.com/ly2/api/venue/index/getVenueStatus?venueId=3&venuetypeId=29&date=2026-03-25 HTTP/1.1
+Host: www.zwcdata.com
+Connection: keep-alive
+Authorization: Bearer ***MASKED_TOKEN***
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027
+xweb_xhr: 1
+Content-Type: application/json
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+HTTP/1.1 200
+Server: nginx/1.21.4
+Date: Mon, 23 Mar 2026 13:19:32 GMT
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+1eee
+{"code":200,"msg":"操作成功","data":{"date":["09:30","10:30","11:30","12:30","13:30","14:30","15:30","16:30","17:30","18:30","19:30","20:30"],"sites":[{"id":31,"siteName":"1号场","siteStatus":[{"id":58345,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":58346,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":58347,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"3","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":58348,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":58349,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":58350,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":58351,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":58352,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":58353,"setDate":"2026-03-25","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":58354,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":58355,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":58356,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":32,"siteName":"2号场","siteStatus":[{"id":58717,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":58718,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":58719,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":58720,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":58721,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":58722,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":58723,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":58724,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":58725,"setDate":"2026-03-25","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":58726,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":58727,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":58728,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":33,"siteName":"3号场","siteStatus":[{"id":59089,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":59090,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":59091,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":59092,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":59093,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":59094,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":59095,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":59096,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":59097,"setDate":"2026-03-25","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":59098,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":59099,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":59100,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":34,"siteName":"4号场","siteStatus":[{"id":59461,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":59462,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":59463,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":59464,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":59465,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":59466,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":59467,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":59468,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":59469,"setDate":"2026-03-25","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":
+1000
+"2","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":59470,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":59471,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":59472,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":35,"siteName":"5号场","siteStatus":[{"id":59833,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":59834,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":59835,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":59836,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":59837,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":59838,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":59839,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":59840,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"2","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":59841,"setDate":"2026-03-25","setTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":59842,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":59843,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":59844,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]},{"id":36,"siteName":"6号场","siteStatus":[{"id":60205,"setDate":"2026-03-25","setTime":"09:30-10:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"09:30","etime":"10:30","order":null,"pre":null},{"id":60206,"setDate":"2026-03-25","setTime":"10:30-11:30","price":0.00,"username":null,"tel":null,"status":"2","stime":"10:30","etime":"11:30","order":null,"pre":null},{"id":60207,"setDate":"2026-03-25","setTime":"11:30-12:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"11:30","etime":"12:30","order":null,"pre":null},{"id":60208,"setDate":"2026-03-25","setTime":"12:30-13:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"12:30","etime":"13:30","order":null,"pre":null},{"id":60209,"setDate":"2026-03-25","setTime":"13:30-14:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"13:30","etime":"14:30","order":null,"pre":null},{"id":60210,"setDate":"2026-03-25","setTime":"14:30-15:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"14:30","etime":"15:30","order":null,"pre":null},{"id":60211,"setDate":"2026-03-25","setTime":"15:30-16:30","price":36.00,"username":null,"tel":null,"status":"1","stime":"15:30","etime":"16:30","order":null,"pre":null},{"id":60212,"setDate":"2026-03-25","setTime":"16:30-17:30","price":36.00,"username":null,"tel":null,"status":"4","stime":"16:30","etime":"17:30","order":null,"pre":null},{"id":60213,"setDate":"2026-03-25","s
+287
+etTime":"17:30-18:30","price":60.00,"username":null,"tel":null,"status":"4","stime":"17:30","etime":"18:30","order":null,"pre":null},{"id":60214,"setDate":"2026-03-25","setTime":"18:30-19:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"18:30","etime":"19:30","order":null,"pre":null},{"id":60215,"setDate":"2026-03-25","setTime":"19:30-20:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"19:30","etime":"20:30","order":null,"pre":null},{"id":60216,"setDate":"2026-03-25","setTime":"20:30-21:30","price":60.00,"username":null,"tel":null,"status":"2","stime":"20:30","etime":"21:30","order":null,"pre":null}]}]}}
+0
+
+
+
+------------------------------------------------------------------
+

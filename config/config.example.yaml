@@ -1,0 +1,87 @@
+# ============================================================
+# 微信小程序抢票框架 — 配置模板
+# 使用方法：cp config/config.example.yaml config/config.yaml
+#           然后填入你自己的 token 和场地偏好
+# ============================================================
+
+# 抢票目标
+booking:
+  venue_name: "跃动乒羽馆"
+  venue_id: "3"                      # 场馆 ID（已确认）
+  venue_type: "badminton"
+  venuetype_id: 29                   # 羽毛球类型 ID（已确认）
+  target_date_offset: 2              # 抢两天后的场地
+  # 场地优先级：ID 对应关系 1号场=31, 2号场=32, 3号场=33, 4号场=34, 5号场=35, 6号场=36
+  preferred_courts:
+    - id: 31
+      name: "1号场"
+  preferred_time_slots:              # 时间段优先级（格式必须与 API 一致）
+    - "11:30-12:30"
+
+# 定时调度器
+scheduler:
+  trigger_time: "09:30:00.000"       # 每日放票时间，按实际修改
+  ntp_servers:
+    - "ntp.aliyun.com"
+    - "time.windows.com"
+    - "pool.ntp.org"
+  pre_connect_ms: 1500              # 提前预热连接 (毫秒)
+  ntp_sync_interval_s: 300          # NTP 同步间隔 (秒)
+
+# 并发与重试引擎（参数说明见 README）
+engine:
+  concurrency: 3
+  attempt_rounds: 3
+  round_delay_ms: 200
+  request_timeout_s: 5
+  retry:
+    max_retries: 2
+    backoff_base_ms: 500
+    backoff_max_ms: 5000
+    retryable_status_codes:
+      - 502
+      - 503
+      - 429
+
+# 认证（从 Fiddler 抓包获取，见 README）
+auth:
+  token: ""                          # 粘贴抓包获取的 token（Bearer 后面那段）
+  token_header: "Authorization"
+  token_prefix: "Bearer "
+  token_file: ".token_cache"
+
+# API 端点（已通过抓包确认，无需修改）
+api:
+  base_url: "https://www.zwcdata.com/ly2/api"
+  endpoints:
+    venue_status: "/venue/index/getVenueStatus"
+    book: "/venueOrder"
+    booking_detail: "/venueOrder"
+    server_time: "/base/day"
+  extra_headers:
+    User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254173b) XWEB/19027"
+    xweb_xhr: "1"
+    Referer: "https://servicewechat.com/wx694ba9075cfb001b/16/page-frame.html"
+
+# 通知（可选，默认只输出控制台）
+notify:
+  enabled_channels:
+    - "console"
+  wechat_work:
+    webhook_url: ""
+  dingtalk:
+    webhook_url: ""
+    secret: ""
+  email:
+    smtp_host: "smtp.qq.com"
+    smtp_port: 465
+    use_ssl: true
+    username: ""
+    password: ""
+    to_addrs: []
+
+# 日志
+logging:
+  level: "INFO"
+  log_file: "logs/ticket.log"
+  rotation: "10 MB"

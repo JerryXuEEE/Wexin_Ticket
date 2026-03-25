@@ -1,0 +1,18 @@
+# 用户私有配置（含 token，不提交）
+config/config.yaml
+
+# Token 缓存
+.token_cache
+
+# 日志
+logs/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# 系统文件
+.DS_Store
+Thumbs.db
