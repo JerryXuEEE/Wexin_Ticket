@@ -27,6 +27,51 @@
 
 ---
 
+## 一（Mac）、用 Charles Proxy 抓包获取 Token
+
+> Mac 上没有 Fiddler Classic，推荐使用 Charles Proxy。
+
+**下载 Charles Proxy**（免费试用，无需购买也可用）：https://www.charlesproxy.com/download/
+
+### 配置 HTTPS 解密
+
+1. 打开 Charles → 菜单 `Help` → `SSL Proxying` → `Install Charles Root Certificate`
+   - 系统会弹出「钥匙串访问」，找到刚安装的 **Charles Proxy CA** 证书
+   - 双击证书 → 展开「信任」→ 将「使用此证书时」改为 **始终信任** → 关闭窗口（系统会要求输入密码确认）
+2. 菜单 `Proxy` → `SSL Proxying Settings` → 点 `Add`
+   - Host 填 `*.zwcdata.com`，Port 填 `443` → `OK`
+3. 菜单 `Proxy` → `macOS Proxy`，确保已勾选（Charles 会自动接管系统代理）
+
+### 抓取微信流量
+
+4. 打开 Mac 微信，进入「跃动乒羽馆」小程序，随便点一个场地
+5. 回到 Charles，左侧 Structure 视图中找到 `www.zwcdata.com` 节点，展开后点击任意一条请求
+
+### 找到 Token
+
+6. 右侧切换到 `Headers` 标签，在 `Request Headers` 中找到：
+   ```
+   Authorization: Bearer eyJhbGci...（一长串字符）
+   ```
+7. 复制 `Bearer ` **后面那一段**（不含 Bearer 和空格），粘贴到 `config/config.yaml` 的 `auth.token` 字段
+
+### 确认抓包成功
+
+右侧切换到 `JSON Text` 标签，能看到返回的场地列表数据（含 `id`、`name`、`status` 字段）即为成功。
+
+> **注意**：抓完包后建议关闭 Charles 的 macOS Proxy（`Proxy` → 取消勾选 `macOS Proxy`），否则 Charles 关闭后网络会断开。
+
+### 抓包完成后：删除 Charles 根证书
+
+不再需要抓包时，建议删除证书以消除安全风险：
+
+1. 打开 **钥匙串访问**（Spotlight 搜索「钥匙串访问」）
+2. 左侧选择「系统」钥匙串，顶部搜索框输入 `Charles`
+3. 找到 **Charles Proxy CA** 证书，右键 → **删除**，输入密码确认
+4. 回到 Charles → `Proxy` → 取消勾选 `macOS Proxy`（若尚未关闭）
+
+---
+
 ## 二、用 Conda 配置 Python 环境
 
 **前提：已安装 Anaconda 或 Miniconda**（[下载 Miniconda](https://docs.conda.io/en/latest/miniconda.html)，更轻量）
