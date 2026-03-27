@@ -34,6 +34,8 @@ engine:
   attempt_rounds: 3
   round_delay_ms: 200
   request_timeout_s: 5
+  smart_fallback:
+    enabled: false                   # 首选场地全部失败后自动查询同时段其他可用场地
   retry:
     max_retries: 2
     backoff_base_ms: 500

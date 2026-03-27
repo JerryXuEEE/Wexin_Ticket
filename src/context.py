@@ -32,6 +32,7 @@ class BookingResult:
     attempt_number: int = 0
     latency_ms: float = 0.0
     order_id: int | None = None
+    is_business_failure: bool = False   # 服务器明确拒绝（场地已被预约等）
 
 
 @dataclass

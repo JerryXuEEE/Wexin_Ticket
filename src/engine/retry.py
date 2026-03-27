@@ -95,7 +95,7 @@ class RetryPolicy:
                         await asyncio.sleep(delay)
                         continue
 
-                # 业务失败（不重试）
+                # 业务失败（不重试）— 401 是认证问题，不算业务失败
                 return BookingResult(
                     success=False,
                     target=target,
@@ -103,6 +103,7 @@ class RetryPolicy:
                     error=response.message,
                     attempt_number=attempt + 1,
                     latency_ms=elapsed_ms,
+                    is_business_failure=(response.status_code != 401),
                 )
 
             except (aiohttp.ClientError, asyncio.TimeoutError) as e:

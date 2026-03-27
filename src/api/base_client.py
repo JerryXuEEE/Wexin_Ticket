@@ -17,7 +17,7 @@ class VenueAPIProtocol(Protocol):
     """
 
     async def query_available_slots(
-        self, date: str, venue_id: str | None = None
+        self, date: str, venue_id: str | None = None, venuetype_id: int = 29
     ) -> list[SlotInfo]: ...
 
     async def submit_booking(self, target: BookingTarget) -> BookingResponse: ...
