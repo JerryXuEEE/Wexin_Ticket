@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import sys
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -94,13 +95,17 @@ async def main() -> None:
 
     context.auth_token = auth.get_token()
 
-    # 5. NTP 同步
+    # 5. NTP 同步（作为后备时间源）
     from src.scheduler.ntp_sync import NTPSynchronizer
 
     ntp = NTPSynchronizer(config["scheduler"]["ntp_servers"])
-    offset = await ntp.sync()
-    context.ntp_offset_ms = offset * 1000
-    logger.info("NTP 时间偏移: {:.3f} ms", context.ntp_offset_ms)
+    ntp_offset = await ntp.sync()
+    ntp_available = ntp_offset != 0.0
+    context.ntp_offset_ms = ntp_offset * 1000
+    if ntp_available:
+        logger.info("NTP 时间偏移: {:.3f}ms（后备）", context.ntp_offset_ms)
+    else:
+        logger.warning("NTP 同步失败，等待服务器时间矫正")
 
     # 6. 创建 aiohttp 会话
     import aiohttp
@@ -127,6 +132,30 @@ async def main() -> None:
         warm_headers = dict(config["api"].get("extra_headers", {}))
         warm_headers.update(await auth.get_headers())
         warmer = PoolWarmer(session, config["api"]["base_url"], warm_headers)
+
+        # 6.1 时间矫正：优先用服务器时间，失败则回退 NTP
+        t_before = time.time()
+        server_time_str = await api_client.get_server_time()
+        rtt_s = time.time() - t_before
+        if server_time_str:
+            try:
+                server_dt = datetime.strptime(server_time_str, "%Y-%m-%d %H:%M:%S")
+                server_ts = server_dt.timestamp() + 0.5  # 补偿秒级截断
+                local_ts_at_server = ntp.get_precise_time() - rtt_s / 2  # 补偿网络 RTT
+                deviation_s = local_ts_at_server - server_ts
+                ntp.offset -= deviation_s
+                context.ntp_offset_ms = ntp.offset * 1000
+                logger.info(
+                    "✓ 服务器时间矫正: 服务器={}, RTT={:.0f}ms, 偏差={:.3f}s, offset={:.3f}ms",
+                    server_time_str, rtt_s * 1000, deviation_s, context.ntp_offset_ms,
+                )
+            except ValueError:
+                logger.warning("服务器时间格式解析失败: {}", server_time_str)
+        else:
+            if ntp_available:
+                logger.info("服务器时间不可用，使用 NTP 矫正 (offset={:.3f}ms)", context.ntp_offset_ms)
+            else:
+                logger.error("⚠ 服务器时间和 NTP 均不可用，使用本地时钟（精度无保障）")
 
         retry_cfg = engine_cfg["retry"]
         retry_policy = RetryPolicy(

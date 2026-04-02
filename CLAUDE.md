@@ -6,13 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **启动抢票（真实模式）：**
 ```
-"D:/Softwares/Anaconda3/python.exe" src/main.py
+"D:/MyEnvs/Ticket/python.exe" src/main.py
 ```
 程序自动等到 9:30:00.000 触发，发送并发请求，抢到即停。
 
 **Dry-run 测试（不发真实请求）：**
 ```
-"D:/Softwares/Anaconda3/python.exe" src/main.py --dry-run
+"D:/MyEnvs/Ticket/python.exe" src/main.py --dry-run
 ```
 
 **安装依赖：**

@@ -1,9 +1,10 @@
-"""抢票引擎 — 多轮并发抢票核心编排器。"""
+"""抢票引擎 — 按时间段分轮抢票核心编排器。"""
 
 from __future__ import annotations
 
 import asyncio
 import time
+from collections import OrderedDict
 
 from loguru import logger
 
@@ -19,10 +20,10 @@ class BookingEngine:
     核心抢票引擎。
 
     执行流程:
-    1. 多轮抢票（attempt_rounds 轮）
-    2. 每轮并发发出 concurrency 个请求（Semaphore 控制）
-    3. 首个成功通过 Event 通知取消其余任务
-    4. 所有轮次结束后发送通知
+    1. 按时间段优先级遍历
+    2. 每个时段内并发抢所有场地，失败后等 round_delay_ms 重试同一时段
+    3. 仅"不可预约"等明确消息标记死目标，限频不标死
+    4. 首个成功即停止所有后续尝试
     """
 
     def __init__(
@@ -40,84 +41,113 @@ class BookingEngine:
         self.concurrency = engine_config.get("concurrency", 8)
         self.attempt_rounds = engine_config.get("attempt_rounds", 3)
         self.round_delay_ms = engine_config.get("round_delay_ms", 200)
+        self.book_all_slots = engine_config.get("book_all_slots", False)
         fallback_cfg = engine_config.get("smart_fallback", {})
         self.fallback_enabled = fallback_cfg.get("enabled", False)
 
+    @staticmethod
+    def _group_by_time_slot(targets: list[BookingTarget]) -> OrderedDict[str, list[BookingTarget]]:
+        """按时间段分组，保持优先级顺序。"""
+        groups: OrderedDict[str, list[BookingTarget]] = OrderedDict()
+        for t in sorted(targets, key=lambda x: x.priority):
+            groups.setdefault(t.time_slot, []).append(t)
+        return groups
+
     async def run(self, context: BookingContext) -> list[BookingResult]:
-        """执行完整的抢票流程。"""
+        """
+        执行完整的抢票流程。
+
+        策略：按时间段优先级遍历，每个时段内并发抢所有场地，
+        失败则等 round_delay_ms 后重试同一时段（排除死目标），
+        每时段最多 attempt_rounds 轮，成功即停。
+        """
         all_results: list[BookingResult] = []
         success_event = asyncio.Event()
         semaphore = asyncio.Semaphore(self.concurrency)
         start_time = time.perf_counter()
 
-        targets = sorted(context.targets, key=lambda t: t.priority)
-        logger.info("抢票引擎启动: {} 个目标, {} 轮 × {} 并发", len(targets), self.attempt_rounds, self.concurrency)
+        slot_groups = self._group_by_time_slot(context.targets)
 
-        dead_targets: set[tuple[int, str]] = set()   # {(court_id, time_slot)}
-        fallback_queried = False
+        logger.info(
+            "抢票引擎启动: {} 个目标, {} 个时间段, 每时段最多 {} 轮, 并发={}",
+            len(context.targets), len(slot_groups), self.attempt_rounds, self.concurrency,
+        )
 
-        for round_num in range(1, self.attempt_rounds + 1):
-            if success_event.is_set():
-                logger.info("已成功，跳过第 {} 轮", round_num)
+        dead_targets: set[tuple[int, str]] = set()
+
+        first_slot = True
+        for time_slot, group_targets in slot_groups.items():
+            if success_event.is_set() and not self.book_all_slots:
+                logger.info("已成功，跳过时段 {}", time_slot)
                 break
 
-            # 过滤死目标
-            live_targets = [
-                t for t in targets
-                if (t.court_id, t.time_slot) not in dead_targets
-            ]
+            # 全时段模式：每个时段独立，重置成功状态
+            if self.book_all_slots:
+                success_event.clear()
 
-            # 所有首选已死 → 触发降级查询
-            if not live_targets and self.fallback_enabled and not fallback_queried:
-                fallback_queried = True
-                logger.info("所有首选场地已失败，查询可用替代场地...")
-                fallbacks = await self._discover_fallbacks(targets, dead_targets)
-                if fallbacks:
-                    targets.extend(fallbacks)
-                    live_targets = fallbacks
-
-            if not live_targets:
-                logger.warning("第 {} 轮: 无可用目标，提前终止", round_num)
-                break
-
-            logger.info("--- 第 {} / {} 轮 --- ({} 个活跃目标)", round_num, self.attempt_rounds, len(live_targets))
-
-            tasks = [
-                asyncio.create_task(
-                    self._attempt_booking(target, semaphore, success_event, context.dry_run)
-                )
-                for target in live_targets
-            ]
-
-            results = await asyncio.gather(*tasks, return_exceptions=True)
-
-            for result in results:
-                if isinstance(result, Exception):
-                    logger.error("任务异常: {}", result)
-                elif isinstance(result, BookingResult):
-                    all_results.append(result)
-                    if result.success:
-                        success_event.set()
-                    elif result.is_business_failure:
-                        dead_key = (result.target.court_id, result.target.time_slot)
-                        if dead_key not in dead_targets:
-                            dead_targets.add(dead_key)
-                            logger.info(
-                                "标记死目标: {} {} ({})",
-                                result.target.court_name,
-                                result.target.time_slot,
-                                result.error,
-                            )
-
-            # 轮间等待
-            if round_num < self.attempt_rounds and not success_event.is_set():
+            # 时段间等待（从第二个时段开始）
+            if not first_slot:
+                logger.debug("时段间等待 {}ms", self.round_delay_ms)
                 await asyncio.sleep(self.round_delay_ms / 1000)
+            first_slot = False
+
+            logger.info("=== 开始抢时段: {} ({} 个场地) ===", time_slot, len(group_targets))
+
+            for round_num in range(1, self.attempt_rounds + 1):
+                if success_event.is_set():
+                    break
+
+                # 过滤死目标
+                live_targets = [
+                    t for t in group_targets
+                    if (t.court_id, t.time_slot) not in dead_targets
+                ]
+
+                if not live_targets:
+                    logger.warning("时段 {} 第 {} 轮: 所有场地已标死，跳过", time_slot, round_num)
+                    break
+
+                logger.info(
+                    "--- 时段 {} 第 {} / {} 轮 ({} 个场地并发) ---",
+                    time_slot, round_num, self.attempt_rounds, len(live_targets),
+                )
+
+                # 并发发出所有请求
+                tasks = [
+                    asyncio.create_task(
+                        self._attempt_booking(target, semaphore, success_event, context.dry_run)
+                    )
+                    for target in live_targets
+                ]
+                results = await asyncio.gather(*tasks, return_exceptions=True)
+
+                for result in results:
+                    if isinstance(result, Exception):
+                        logger.error("任务异常: {}", result)
+                    elif isinstance(result, BookingResult):
+                        all_results.append(result)
+                        if result.success:
+                            success_event.set()
+                        elif result.is_business_failure:
+                            dead_key = (result.target.court_id, result.target.time_slot)
+                            if dead_key not in dead_targets:
+                                dead_targets.add(dead_key)
+                                logger.info(
+                                    "标记死目标: {} {} ({})",
+                                    result.target.court_name,
+                                    result.target.time_slot,
+                                    result.error,
+                                )
+
+                # 轮间等待（同一时段的下一轮重试前）
+                if not success_event.is_set() and round_num < self.attempt_rounds:
+                    logger.debug("轮间等待 {}ms", self.round_delay_ms)
+                    await asyncio.sleep(self.round_delay_ms / 1000)
 
         total_ms = (time.perf_counter() - start_time) * 1000
         successes = [r for r in all_results if r.success]
         logger.info("抢票完成: 总耗时={:.0f}ms, 成功={}, 失败={}", total_ms, len(successes), len(all_results) - len(successes))
 
-        # 发送通知
         await self._send_notification(all_results, total_ms)
 
         return all_results

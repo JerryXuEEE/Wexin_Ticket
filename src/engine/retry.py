@@ -13,6 +13,14 @@ from loguru import logger
 from src.api.models import BookingResponse
 from src.context import BookingResult, BookingTarget
 
+# 仅当服务器消息包含以下关键词时，才认定场地真正不可预约（标记为死目标）
+_VENUE_DEAD_KEYWORDS = ("不可预约", "已被预约", "已满", "不可用", "已过期", "已关闭", "已结束")
+
+
+def _is_venue_unavailable(message: str) -> bool:
+    """判断服务器返回的错误消息是否表示场地真正不可预约。"""
+    return any(kw in message for kw in _VENUE_DEAD_KEYWORDS)
+
 
 class RetryPolicy:
     """
@@ -95,7 +103,8 @@ class RetryPolicy:
                         await asyncio.sleep(delay)
                         continue
 
-                # 业务失败（不重试）— 401 是认证问题，不算业务失败
+                # 业务失败判定：仅当消息明确表示场地不可预约时才标记为死目标
+                # "访问过于频繁" 等限频错误不标死，下轮可重试
                 return BookingResult(
                     success=False,
                     target=target,
@@ -103,7 +112,7 @@ class RetryPolicy:
                     error=response.message,
                     attempt_number=attempt + 1,
                     latency_ms=elapsed_ms,
-                    is_business_failure=(response.status_code != 401),
+                    is_business_failure=_is_venue_unavailable(response.message),
                 )
 
             except (aiohttp.ClientError, asyncio.TimeoutError) as e:
